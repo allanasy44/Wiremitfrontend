@@ -1,0 +1,272 @@
+/* Professional Financial App Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Trustworthy Financial Theme */
+    --background: 0 0% 100%;
+    --foreground: 218 23% 23%;
+    
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 218 23% 23%;
+    
+    /* Popover System */
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 23% 23%;
+    
+    /* Primary Brand - Professional Blue */
+    --primary: 216 87% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 216 87% 45%;
+    --primary-light: 216 87% 96%;
+    
+    /* Secondary - Warm Financial Gold */
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 218 23% 23%;
+    --secondary-hover: 43 96% 48%;
+    --secondary-light: 43 96% 95%;
+    
+    /* Success - Transaction Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+    
+    /* Warning - Alert Orange */
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 32 95% 95%;
+    
+    /* Error - Critical Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 95%;
+    
+    /* Neutral System */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --muted-hover: 220 14% 92%;
+    
+    --accent: 220 14% 96%;
+    --accent-foreground: 218 23% 23%;
+    
+    /* UI Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 216 87% 52%;
+    
+    /* African-inspired Accent */
+    --african-accent: 14 88% 48%;
+    --african-accent-light: 14 88% 95%;
+    
+    /* Financial Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 87% 52%), hsl(216 87% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 28%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(216 87% 52%), hsl(14 88% 48%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 43% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 43% 11% / 0.1), 0 2px 4px -1px hsl(220 43% 11% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 43% 11% / 0.1), 0 4px 6px -2px hsl(220 43% 11% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 43% 11% / 0.1), 0 10px 10px -5px hsl(220 43% 11% / 0.04);
+    --shadow-financial: 0 4px 20px hsl(216 87% 52% / 0.15);
+    
+    /* Spacing Scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode optimized for financial apps */
+    --background: 218 30% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 218 30% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 218 30% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 216 87% 65%;
+    --primary-foreground: 218 30% 8%;
+    --primary-hover: 216 87% 58%;
+    --primary-light: 216 87% 15%;
+    
+    --secondary: 43 96% 70%;
+    --secondary-foreground: 218 30% 8%;
+    --secondary-hover: 43 96% 62%;
+    --secondary-light: 43 96% 12%;
+    
+    --success: 142 76% 50%;
+    --success-foreground: 218 30% 8%;
+    --success-light: 142 76% 12%;
+    
+    --muted: 218 25% 15%;
+    --muted-foreground: 220 9% 65%;
+    --muted-hover: 218 25% 18%;
+    
+    --accent: 218 25% 15%;
+    --accent-foreground: 0 0% 95%;
+    
+    --border: 218 25% 20%;
+    --input: 218 25% 20%;
+    --ring: 216 87% 65%;
+    
+    --african-accent: 14 88% 60%;
+    --african-accent-light: 14 88% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer components {
+  /* Financial Component Variants */
+  .btn-financial {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-hover text-primary-foreground 
+           shadow-financial transition-all duration-300 hover:shadow-xl hover:scale-[1.02] 
+           active:scale-[0.98] rounded-lg font-semibold;
+  }
+  
+  .btn-financial::before {
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+           translate-x-[-100%] transition-transform duration-500;
+    content: '';
+  }
+  
+  .btn-financial:hover::before {
+    @apply translate-x-[100%];
+  }
+  
+  .card-financial {
+    @apply bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm border 
+           shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl;
+  }
+  
+  .input-financial {
+    @apply bg-background/50 backdrop-blur-sm border-2 border-input 
+           focus:border-primary focus:ring-2 focus:ring-primary/20 
+           transition-all duration-200 rounded-lg;
+  }
+  
+  /* Animations */
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+}
