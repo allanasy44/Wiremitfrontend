@@ -58,9 +58,9 @@ This project was built as part of the Wiremit Frontend Developer Technical Inter
 
 ### Security Considerations
 
-- **Credential Storage**: Passwords stored in localStorage (mock only - would be hashed in production)
+- **Credential Storage**: Passwords stored in localStorage (password hashing with bcryptjs)
 - **Session Management**: Secure cookie storage with httpOnly, secure, and sameSite flags
-- **XSS Protection**: Input sanitization and validation
+- **XSS Protection**: Input sanitization and validation(Escaped output)
 - **CSRF Protection**: Token-based request validation
 - **Authentication**: JWT-like token system with refresh tokens
 
